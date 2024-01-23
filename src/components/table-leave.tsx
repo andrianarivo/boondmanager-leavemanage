@@ -8,18 +8,25 @@ import {
   TableCell,
   TableRow,
 } from '@nextui-org/react'
-import React from 'react'
+import React, { useEffect } from 'react'
+import type { Leave } from '../../types'
+import { useSession } from 'next-auth/react'
 
 const headers = ['Année', 'Acquis', 'Pris', 'Reliquat']
-const data = [
-  {
-    year: 2023,
-    acquired: 4,
-    taken: 4,
-    balance: 0,
-  },
-]
+
 function TableLeave() {
+  const [data, setData] = React.useState<Leave[]>([])
+  const session = useSession()
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch('http://localhost:3000/api')
+      const responseJson = await response.json()
+      setData(responseJson)
+    }
+    fetchData()
+  }, [data, setData])
+
   return (
     <Table aria-label="Example static collection table">
       <TableHeader>
