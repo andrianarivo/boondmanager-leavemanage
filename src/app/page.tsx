@@ -1,9 +1,9 @@
-import TableLeave from '@/components/table-leave'
+import TableLeaveAuth from '@/components/table-leave-auth'
 
 export default function Home() {
   return (
     <main className="flex flex-col">
-      <TableLeave />
+      <TableLeaveAuth />
     </main>
   )
 }

@@ -7,6 +7,8 @@ import {
   TableBody,
   TableCell,
   TableRow,
+  Skeleton,
+  CircularProgress,
 } from '@nextui-org/react'
 import React, { useEffect } from 'react'
 import type { Leave } from '../../types'
@@ -16,7 +18,6 @@ const headers = ['Année', 'Acquis', 'Pris', 'Reliquat']
 
 function TableLeave() {
   const [data, setData] = React.useState<Leave[]>([])
-  const session = useSession()
 
   useEffect(() => {
     async function fetchData() {
@@ -34,7 +35,13 @@ function TableLeave() {
           <TableColumn key={idx}>{header}</TableColumn>
         ))}
       </TableHeader>
-      <TableBody>
+      <TableBody
+        emptyContent={
+          <div className="flex justify-center align-center w-full">
+            <CircularProgress color="danger" label="Loading..." />
+          </div>
+        }
+      >
         {data.map((row, idx) => (
           <TableRow key={idx}>
             <TableCell>{row.year}</TableCell>

@@ -37,5 +37,6 @@ export async function GET() {
       balance: 0,
     },
   ]
+
   return Response.json(data)
 }
