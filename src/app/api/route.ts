@@ -23,6 +23,10 @@ export async function GET() {
     parseFloatOrZero(rows[2].get('Février'))
   const balance1 = acquired1 - taken1
 
+  const acquired2 = (new Date().getMonth() + 1) * 1.25
+  const taken2 = 0
+  const balance2 = acquired2 - taken2
+
   const data = [
     {
       year: currentYear - 1,
@@ -32,9 +36,9 @@ export async function GET() {
     },
     {
       year: currentYear,
-      acquired: 4,
-      taken: 4,
-      balance: 0,
+      acquired: acquired2,
+      taken: 0,
+      balance: balance2,
     },
   ]
 
