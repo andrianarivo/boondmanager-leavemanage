@@ -2,6 +2,7 @@ import { GoogleSpreadsheet } from 'google-spreadsheet'
 import { JWT } from 'google-auth-library'
 import { parseFloatOrZero } from '@/utils'
 
+// {BASE_URL}/api/resources/{resource_id}/absences_reports
 export async function GET() {
   const sheetId = '1qk8Zh5cf_h1koHUjiGZ5FJjjt_dS-4jvceUxqsf07UI'
   const serviceAccountAuth = new JWT({

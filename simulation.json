@@ -1,0 +1,49 @@
+{
+  "meta": {
+
+  },
+  "data": [
+    {
+      "99BPmpgrSP": {
+        "creationDate": "2019-01-01T00:00:00.000Z",
+        "state": "active",
+        "absencesPeriods": [
+          {
+            "id": "BynAhJ4KTA",
+            "startDate": "2019-01-01T00:00:00.000Z",
+            "endDate": "2019-01-01T00:00:00.000Z",
+            "duration": 1,
+            "title": "Congés payés"
+          },
+          {
+            "id": "BynAhJ4KTB",
+            "startDate": "2019-01-01T00:00:00.000Z",
+            "endDate": "2019-01-01T00:00:00.000Z",
+            "duration": 1,
+            "title": "Congés payés"
+          }
+        ]
+      },
+      "BynAhJ4KTA": {
+        "creationDate": "2019-01-01T00:00:00.000Z",
+        "state": "active",
+        "absencesPeriods": [
+          {
+            "id": "BynAhJ4KTA",
+            "startDate": "2019-01-01T00:00:00.000Z",
+            "endDate": "2019-01-01T00:00:00.000Z",
+            "duration": 1,
+            "title": "Congés payés"
+          },
+          {
+            "id": "BynAhJ4KTB",
+            "startDate": "2019-01-01T00:00:00.000Z",
+            "endDate": "2019-01-01T00:00:00.000Z",
+            "duration": 1,
+            "title": "Congés payés"
+          }
+        ]
+      }
+    }
+  ]
+}
