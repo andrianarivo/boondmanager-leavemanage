@@ -26,7 +26,7 @@ function TableLeave() {
       setData(responseJson)
     }
     fetchData()
-  }, [data, setData])
+  }, [setData])
 
   return (
     <Table aria-label="Example static collection table">

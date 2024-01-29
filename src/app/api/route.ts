@@ -1,6 +1,9 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet'
 import { JWT } from 'google-auth-library'
 import { parseFloatOrZero } from '@/utils'
+import { readFile } from 'fs/promises'
+
+export const revalidate = 0
 
 // {BASE_URL}/api/resources/{resource_id}/absences_reports
 export async function GET() {
@@ -23,6 +26,13 @@ export async function GET() {
     parseFloatOrZero(rows[2].get('Janvier')) +
     parseFloatOrZero(rows[2].get('Février'))
   const balance1 = acquired1 - taken1
+
+  try {
+    const data = await readFile('./simulation.json')
+    console.log(data.toString())
+  } catch (error) {
+    console.error(error)
+  }
 
   const acquired2 = (new Date().getMonth() + 1) * 1.25
   const taken2 = 0
