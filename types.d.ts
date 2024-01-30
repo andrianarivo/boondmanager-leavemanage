@@ -14,7 +14,9 @@ export interface AbsencesPeriods {
   workUnitType: WorkUnitType
 }
 
-export interface AbsencesData {
+export type AbsencesData = Record<string, AbsencesReport>
+
+export interface AbsencesReport {
   creationDate: string
   state: AbsenceState
   absencesPeriods: AbsencesPeriods[]
